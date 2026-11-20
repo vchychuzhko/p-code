@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Code Your Claude Responsibly</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="node_modules/@shower/ribbon/styles/index.css">
+    <style>
+        .shower {
+            --slide-ratio: calc(16 / 9);
+        }
+
+        input, button {
+            font-size: inherit;
+        }
+        button {
+            cursor: pointer;
+        }
+
+        .subtitle {
+            text-align: center;
+        }
+
+        .slide img {
+            display: block;
+            margin-inline: auto;
+            width: 256px;
+        }
+
+        .todo {
+            color: tomato;
+        }
+    </style>
+</head>
+<body class="shower list">
+    <header class="caption">
+        <h1>Code Your Claude Responsibly</h1>
+        <p>Vladyslav Chychuzhko</p>
+    </header>
+
+    <section class="slide">
+        <blockquote><h2 class="shout">Code Your Claude Responsibly</h2></blockquote>
+    </section>
+
+    <section class="slide">
+        <h2 class="shout">Where it all started?</h2>
+    </section>
+
+    <section class="slide">
+        <h2>Privacy Concern</h2>
+        <ol>
+            <li>Claude has access to the OS</li>
+            <li>Claude has access to applications</li>
+            <li>Claude has access to user data</li>
+        </ol>
+    </section>
+
+    <section class="slide">
+        <h2>Security Concern</h2>
+        <ol>
+            <li>If Claude is hacked, whole system might be compromised</li>
+            <li>Claude can easily break something critical in the system</li>
+        </ol>
+    </section>
+
+    <section class="slide">
+        <h2 class="shout">Should we do something?</h2>
+    </section>
+
+    <section class="slide">
+        <h2>Convenience vs Safety</h2>
+        <ul>
+            <li>Is this your personal or work PC?</li>
+            <li>Do you have any valuable or sensitive data on it?</li>
+            <li>Can you easily restore your system?</li>
+        </ul>
+    </section>
+
+    <section class="slide">
+        <h2>Options</h2>
+        <ol>
+            <li class="next">Dedicated PC (cloud or local)</li>
+            <li class="next">Docker</li>
+            <li class="next">Virtual Machine</li>
+        </ol>
+        <div class="spotlight next" style="
+            --spotlight-radius: 0;
+            --spotlight-opacity: 40%;
+            --spotlight-width: 1024px;
+            --spotlight-height: 50px;
+            --spotlight-top: 5px;
+        "></div>
+    </section>
+
+    <section class="slide">
+        <h2>My Setup</h2>
+        <ol>
+            <li>Host Ubuntu</li>
+            <li><a href="https://virt-manager.org/" target="_blank">Virtual Machine Manager</a></li>
+            <li>VM Ubuntu Server</li>
+        </ol>
+    </section>
+
+    <section class="slide">
+        <h2>Connecting Filesystem</h2>
+        <ol>
+            <li>Install <strong>virtiofsd</strong></li>
+            <li>Configure mounted folder</li>
+            <li>Mount this folder in virtual machine</li>
+        </ol>
+        <blockquote class="note">
+            <a href="https://www.debugpoint.com/share-folder-virt-manager/" target="_blank">Instruction</a>
+        </blockquote>
+    </section>
+
+    <section class="slide">
+        <h2>How it works</h2>
+        <ol>
+            <li>Project lives in <strong>shared</strong> folder</li>
+            <li><strong>shared</strong> folder is mounted to VM and Claude has access to it</li>
+            <li>Host system is responsible for running the project</li>
+        </ol>
+    </section>
+
+    <section class="slide">
+        <h2>Pros</h2>
+        <ol>
+            <li>Claude has access to only what you decide</li>
+            <li>If Claude breaks anything, host system is unaffected</li>
+            <li>Full compatibility between host and VM</li>
+            <li>Easy to replicate</li>
+            <li>You can turn it off</li>
+        </ol>
+    </section>
+
+    <section class="slide">
+        <h2>Connection to Claude</h2>
+        <ol>
+            <li>Virtual Machine has static IP</li>
+            <li>Add your key to <strong>authorized_keys</strong></li>
+            <li>Use alias for SSH connection</li>
+        </ol>
+    </section>
+
+    <section class="slide">
+        <h2 class="shout">Demo</h2>
+    </section>
+
+    <section class="slide">
+        <h2>Cons</h2>
+        <ol>
+            <li>Initial setup</li>
+            <li>Extra steps with adding projects</li>
+            <li>No IDE integrations</li>
+            <li>CLI only</li>
+        </ol>
+    </section>
+
+    <section class="slide">
+        <h2>Summary</h2>
+        <ul>
+            <li>Decide if this is needed and worth it for you</li>
+            <li>Find the best setup that is suitable for you</li>
+            <li>Be responsible</li>
+        </ul>
+    </section>
+
+    <section class="slide">
+        <h2>Thank you!</h2>
+        <img src="pictures/repo.png" alt="GitHub Repository" width="256">
+        <p class="subtitle">@vchychuzhko</p>
+    </section>
+
+    <div class="progress"></div>
+
+    <script src="node_modules/@shower/core/dist/index.js"></script>
+    <!-- Copyright © 2024 Yours Truly, Famous Inc. -->
+</body>
+</html>
